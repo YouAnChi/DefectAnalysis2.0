@@ -1,0 +1,210 @@
+/* 智能缺陷分析系统 - 自定义样式 */
+
+/* 全局样式 */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --success-color: #2ECC71;
+    --warning-color: #F39C12;
+    --light-bg: #ECF0F1;
+    --dark-bg: #34495E;
+    --text-color: #2C3E50;
+    --light-text: #ECF0F1;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* 页面背景和字体 */
+.stApp {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 标题和Logo容器 */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Logo样式 */
+.logo-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+/* 主标题特殊样式 */
+.main-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* 卡片容器 */
+.css-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.css-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 按钮样式 */
+.stButton > button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.stButton > button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* 主操作按钮 */
+.primary-button > button {
+    background-color: var(--accent-color);
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.primary-button > button:hover {
+    background-color: #C0392B;
+}
+
+/* 文件上传区域 */
+.uploadedFile {
+    border: 2px dashed var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.uploadedFile:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* 进度条样式 */
+.stProgress > div > div {
+    background-color: var(--secondary-color);
+}
+
+/* 成功消息 */
+.element-container div[data-testid="stAlert"] {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+/* 日志显示区域 */
+.log-container {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* 系统状态指示器 */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-success {
+    background-color: var(--success-color);
+}
+
+.status-warning {
+    background-color: var(--warning-color);
+}
+
+.status-error {
+    background-color: var(--accent-color);
+}
+
+/* 信息卡片 */
+.info-card {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* 下载按钮区域 */
+.download-section {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* 仪表板卡片 */
+.dashboard-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* 数据指标样式 */
+[data-testid="stMetric"] {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    text-align: center;
+}
+
+[data-testid="stMetricLabel"] {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: var(--secondary-color) !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .css-card {
+        padding: 1rem;
+    }
+}

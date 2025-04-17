@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- 背景圆形 -->
+  <circle cx="60" cy="60" r="55" fill="#2C3E50" />
+  
+  <!-- 放大镜手柄 -->
+  <path d="M95,95 L75,75" stroke="#3498DB" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- 放大镜圆形 -->
+  <circle cx="55" cy="55" r="25" fill="none" stroke="#3498DB" stroke-width="6" />
+  
+  <!-- 缺陷符号 -->
+  <path d="M55,45 L55,55 M55,65 L55,65" stroke="#E74C3C" stroke-width="6" stroke-linecap="round" />
+  <circle cx="55" cy="65" r="2" fill="#E74C3C" />
+  
+  <!-- 数据线条 -->
+  <path d="M30,55 L40,45 L50,60 L60,50" stroke="#2ECC71" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
