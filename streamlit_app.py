@@ -50,6 +50,8 @@ if 'processed_data' not in st.session_state:
     st.session_state['processed_data'] = None
 if 'log_data' not in st.session_state:
     st.session_state['log_data'] = None
+if 'similar_cases_data' not in st.session_state:
+    st.session_state['similar_cases_data'] = None
 if 'analysis_completed' not in st.session_state:
     st.session_state['analysis_completed'] = False
 if 'data_processed' not in st.session_state:
@@ -103,7 +105,7 @@ def main():
     if st.session_state['analysis_completed']:
         st.markdown('<div class="download-section">', unsafe_allow_html=True)
         st.success("✅ 分析已完成，可以下载结果文件和日志")
-        download_col1, download_col2, download_col3 = st.columns(3)
+        download_col1, download_col2, download_col3, download_col4 = st.columns(4)
         
         # 显示数据可视化仪表板
         if st.session_state['output_data'] is not None:
@@ -147,6 +149,31 @@ def main():
                 )
                 
         with download_col3:
+            # 添加下载相似案例的按钮
+            if st.session_state['similar_cases_data'] is not None:
+                st.download_button(
+                    label="📋 下载相似案例",
+                    data=st.session_state['similar_cases_data'],
+                    file_name="缺陷相似案例.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    key="download_similar_cases"
+                )
+            else:
+                # 尝试从文件中读取相似案例数据
+                similar_cases_file = os.path.splitext(output_file_path)[0] + '_相似案例.xlsx'
+                if os.path.exists(similar_cases_file) and os.path.getsize(similar_cases_file) > 0:
+                    with open(similar_cases_file, "rb") as f:
+                        similar_cases_data = f.read()
+                    st.session_state['similar_cases_data'] = similar_cases_data
+                    st.download_button(
+                        label="📋 下载相似案例",
+                        data=similar_cases_data,
+                        file_name="缺陷相似案例.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        key="download_similar_cases"
+                    )
+                
+        with download_col4:
             if not st.session_state['data_processed'] and st.session_state['output_data'] is not None:
                 if st.button("🔍 提取缺陷数据", key="extract_data"):
                     with st.spinner("正在提取缺陷数据..."):
@@ -386,6 +413,17 @@ def main():
                         with open(log_file_path, "r", encoding="utf-8") as f:
                             log_data = f.read()
                         st.session_state['log_data'] = log_data
+                        
+                    # 检查相似案例文件是否存在，并保存到session_state中
+                    similar_cases_file = os.path.splitext(output_file_path)[0] + '_相似案例.xlsx'
+                    if os.path.exists(similar_cases_file) and os.path.getsize(similar_cases_file) > 0:
+                        with open(similar_cases_file, "rb") as f:
+                            similar_cases_data = f.read()
+                        st.session_state['similar_cases_data'] = similar_cases_data
+                        logging.info(f"相似案例数据已保存到session_state，文件大小: {len(similar_cases_data)} 字节")
+                    else:
+                        logging.warning(f"相似案例文件不存在或为空: {similar_cases_file}")
+                        st.session_state['similar_cases_data'] = None
                     
                     # 标记分析已完成，用于显示下载按钮
                     st.session_state['analysis_completed'] = True

@@ -158,6 +158,8 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
         # 检索相似案例
         logging.info("开始检索相似案例...")
         similar_docs = []
+        # 用于存储相似案例的详细信息，供后续导出使用
+        similar_cases_info = []
         
         # 执行检索
         if not similar_docs:
@@ -216,12 +218,23 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
                 similarity = 100 / (1 + score)
                 logging.info(f"案例{i}相似度: {similarity:.2f}%")
                 context += f"案例{i}（相似度: {similarity:.2f}%）：\n{doc.page_content}\n"
+                
+                # 创建相似案例信息字典
+                case_info = {
+                    '案例序号': i,
+                    '相似度': f"{similarity:.2f}%",
+                    '缺陷描述': doc.page_content
+                }
+                
                 if hasattr(doc, 'metadata') and doc.metadata:
                     context += "元数据信息:\n"
                     for key, value in doc.metadata.items():
                         if value and str(value).lower() != 'nan' and key != 'source':
                             context += f"{key}: {value}\n"
+                            case_info[key] = value
                     context += "\n"
+                
+                similar_cases_info.append(case_info)
         
         # 加载系统提示文件，load_system_prompt函数已修改为在文件不存在时返回默认提示词
         system_prompt = load_system_prompt(system_prompt_file)
@@ -247,10 +260,10 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
             logging.error(f"LLM调用失败: {str(e)}")
             return f"LLM调用失败: {str(e)}", f"分析过程出错: {str(e)}"
         
-        return reasoning_content, answer_content
+        return reasoning_content, answer_content, similar_cases_info
     except Exception as e:
         logging.error(f"缺陷分析过程出错: {str(e)}")
-        return f"分析过程出错: {str(e)}", f"分析过程出错: {str(e)}"
+        return f"分析过程出错: {str(e)}", f"分析过程出错: {str(e)}", []
 
 def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowledge_base_file='defects_knowledge_base.json', similarity_threshold=0.3):
     # 确保输入文件路径是绝对路径
@@ -344,6 +357,9 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
         results_df['推理过程'] = ''
         results_df['分析结果'] = ''
         
+        # 创建相似案例DataFrame，用于存储每条缺陷的相似案例
+        similar_cases_df = pd.DataFrame(columns=['缺陷索引', '缺陷描述', '缺陷标题', '评分分类', '案例序号', '相似度', '相似案例描述', '相似案例标题', 'defect_number', 'product_name', 'severity_level', 'defect_type', 'defect_scenario', 'introduction_phase'])
+        
         # 逐行处理缺陷描述
         total_rows = len(df)
         logging.info(f"共有 {total_rows} 条缺陷描述需要处理")
@@ -368,7 +384,7 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
             
             try:
                 # 分析缺陷
-                reasoning, analysis = analyze_defect(
+                reasoning, analysis, similar_cases = analyze_defect(
                     str(defect_description), 
                     str(defect_title), 
                     str(score_category), 
@@ -379,6 +395,25 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
                 results_df.at[index, '推理过程'] = reasoning
                 results_df.at[index, '分析结果'] = analysis
                 logging.info(f"第 {index + 1} 条处理完成")
+                
+                # 将相似案例添加到相似案例DataFrame
+                for case in similar_cases:
+                    case_row = {
+                        '缺陷索引': index,
+                        '缺陷描述': defect_description,
+                        '缺陷标题': defect_title,
+                        '评分分类': score_category,
+                        '案例序号': case.get('案例序号', ''),
+                        '相似度': case.get('相似度', ''),
+                        '相似案例描述': case.get('缺陷描述', ''),
+                        '相似案例标题': case.get('title', ''),
+                    }
+                    
+                    # 添加其他可能的元数据字段
+                    for key in ['defect_number', 'product_name', 'severity_level', 'defect_type', 'defect_scenario', 'introduction_phase']:
+                        case_row[key] = case.get(key, '')
+                    
+                    similar_cases_df = pd.concat([similar_cases_df, pd.DataFrame([case_row])], ignore_index=True)
             except Exception as e:
                 error_msg = f"处理第 {index + 1} 条时出错: {str(e)}"
                 logging.error(error_msg)
@@ -390,6 +425,11 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
         try:
             results_df.to_excel(output_file, index=False)
             logging.info(f"分析完成！结果已保存到 {output_file}")
+            
+            # 保存相似案例到新的Excel文件
+            similar_cases_output = os.path.splitext(output_file)[0] + '_相似案例.xlsx'
+            similar_cases_df.to_excel(similar_cases_output, index=False)
+            logging.info(f"相似案例已保存到: {similar_cases_output}")
         except Exception as e:
             logging.error(f"保存结果文件失败: {str(e)}")
         
