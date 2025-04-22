@@ -1950,3 +1950,489 @@
 2025-04-17 16:24:52,583 - root - INFO - ç¬¬ 5 æ¡å¤„ç†å®Œæˆ
 2025-04-17 16:24:52,583 - root - INFO - æ­£åœ¨ä¿å­˜ç»“æœåˆ°: /var/folders/rz/h1c4phvd12152pyf2fyq1xsc0000gn/T/tmp25ik344w.xlsx
 2025-04-17 16:24:52,595 - root - INFO - åˆ†æå®Œæˆï¼ç»“æœå·²ä¿å­˜åˆ° /var/folders/rz/h1c4phvd12152pyf2fyq1xsc0000gn/T/tmp25ik344w.xlsx
+2025-04-22 15:01:23,903 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:01:23,904 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:01:23,904 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:01:23,904 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:01:23,905 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:01:23,925 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:01:23,926 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:01:23,926 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:01:23,935 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:01:29,446 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:01:29,929 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:01:29,929 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:01:39,950 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name shibing624/text2vec-base-chinese. Creating a new one with mean pooling.
+2025-04-22 15:01:59,982 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+2025-04-22 15:01:59,983 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:02:46,840 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:02:46,840 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:02:46,840 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:02:46,840 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:02:46,841 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:02:46,862 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:02:46,862 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:02:46,862 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:02:46,871 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:02:51,087 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:02:51,501 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:02:51,501 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:04:04,587 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745308977&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwODk3N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=Gzk%7EUVtWZ0rRukpC8-Wsko83YgcEcr3Byy5j%7ErTTfzmGjTyPd6Ob10J-8eQTLLv6foEKxYhNvg-M9VfpbnZcix06nkYzTk8beI-EWPZjJtqc0QccXML1oHTtvZXhIEZ6sBq1G4Au%7EcRelXN5Zji7%7EQPCJvFBOKeTUXjppUzJrn0w2UWryhUz7l5zyxtRk9k2wkbHO9KYNCXFGRHFB1ke0L96fwBivnrou-9XpAM%7E-xhHU4e5HEEvfnZ3mhRI6YfqJY%7E0sp6LDuBa5bCbXXekPDqkbczbOD3V3BNhBAxeXXCuHqoohftnOhaSekymSwx1E6Yjhw8Q4u6f81W2GAJ6kA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:05:22,802 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/54ff3a857e3efa0b8114eb5e7a9e7e2b6230b4ddb083254a751e44772bb99075?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745309063&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTA2M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS81NGZmM2E4NTdlM2VmYTBiODExNGViNWU3YTllN2UyYjYyMzBiNGRkYjA4MzI1NGE3NTFlNDQ3NzJiYjk5MDc1P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=I4r51TCIg6%7ERqMJhB2VTI5gZcCVorz4ruAjg9tT%7EsCyIWHQnSDRRRXfYzW-sXG3sAIgrPv%7EtaJuXbAbBSN63mNT-5W%7EzAWaCgcfi9S-yl9bW11Up54guXgnVyPLMR3IPgqN2JiNGofOrjDJTFyzdSBNFhyq4r-51qeq%7E9A6ud6KjLHNtmkrS6MUmk6djc35F2MJOZkfF3Mrh2YUEKVAkOiBTvfeyq4wsOem7fJWxq6k-hDuRF3gL8jYaYzxYvexjv98AZlcMUCX3Dp55h9QSKVWoIPHmraXqOfhHlAw-bqSuCOPzbkgo9UkFl8gRADrChMVH2sbKoriyj7bfnUWFkg__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:05:40,252 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:05:40,252 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:05:47,359 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:05:47,360 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:05:47,360 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:05:47,360 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:05:47,360 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:05:47,381 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:05:47,381 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:05:47,382 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:05:47,390 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:05:51,468 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:05:51,863 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:05:51,863 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:06:49,286 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745309157&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTE1N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=LOYB3Ul3MthLtyKCl5G-0tUGYJWjs76uEEFPYA-VU%7EjdR2uUIMrG879w-ZGTYOhb1hxfyx6mwWAws6sQQzSR4tPmXlOwaFFy5sMpI2HkJTWRmx5kBB-58%7EIvulxzU0c8Bcvt7FOSnV9s-YhnF%7EPh%7EDPl0bGWp7kx6VVUyA4WxHyCh7jb1LQ2ZU%7EbS1TeKcQdpfQWMtcmNxVxymayXlXsU3d1WiLGDq56lqZ9NXNYhA9Yye2-CWpQOj4WYJFG8wpTihj7amnLll09icImrfD555PRZ23nu%7EFaXYm72Eu0T0L10coW0UKx-1pydnL-NqMtu4ITgCZqUIAwKOBLcINfsQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:07:54,544 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745309157&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTE1N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=LOYB3Ul3MthLtyKCl5G-0tUGYJWjs76uEEFPYA-VU%7EjdR2uUIMrG879w-ZGTYOhb1hxfyx6mwWAws6sQQzSR4tPmXlOwaFFy5sMpI2HkJTWRmx5kBB-58%7EIvulxzU0c8Bcvt7FOSnV9s-YhnF%7EPh%7EDPl0bGWp7kx6VVUyA4WxHyCh7jb1LQ2ZU%7EbS1TeKcQdpfQWMtcmNxVxymayXlXsU3d1WiLGDq56lqZ9NXNYhA9Yye2-CWpQOj4WYJFG8wpTihj7amnLll09icImrfD555PRZ23nu%7EFaXYm72Eu0T0L10coW0UKx-1pydnL-NqMtu4ITgCZqUIAwKOBLcINfsQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:08:03,701 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:08:03,701 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:08:21,277 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:08:21,277 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:08:21,277 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:08:21,277 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:08:21,278 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:08:21,299 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:08:21,299 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:08:21,299 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:08:21,308 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:08:25,383 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:08:25,793 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:08:25,794 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:08:54,615 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745309163&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTE2M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=rIfvrGETWHYIb6w0gdggJ0HWkCOSb6Fwt9DAqvgXgynlBTAtnTHMLohD8dgPT1D5i1Fl1DK-%7Ey8RWHRG65vZB1-gYZgbVJmjCxp3PZshQ9wcS64ga%7EBUH8Hed2GuAhWtSuJbbpokMCmc0-B-VAkcaqbPOhJsczu%7Ex-QlvlKsVUY2hWaaRWQBxNs6qUUmgGYoDnKdJy7kUnHKQECbtoExbQ7aQLbbIA%7EK4zTNIbpPRN0n9fQb9Wt13nYnTtoLh-UdhFmqSd-ojj4osRnnQ4bP10zAfOhBR8Ur%7EzORJQkRgcaAmZ7MdUzxxs4kA9q-I0qHlOe9wTdgTBsbYitpyIpRYA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:10:39,098 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745309163&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTE2M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=rIfvrGETWHYIb6w0gdggJ0HWkCOSb6Fwt9DAqvgXgynlBTAtnTHMLohD8dgPT1D5i1Fl1DK-%7Ey8RWHRG65vZB1-gYZgbVJmjCxp3PZshQ9wcS64ga%7EBUH8Hed2GuAhWtSuJbbpokMCmc0-B-VAkcaqbPOhJsczu%7Ex-QlvlKsVUY2hWaaRWQBxNs6qUUmgGYoDnKdJy7kUnHKQECbtoExbQ7aQLbbIA%7EK4zTNIbpPRN0n9fQb9Wt13nYnTtoLh-UdhFmqSd-ojj4osRnnQ4bP10zAfOhBR8Ur%7EzORJQkRgcaAmZ7MdUzxxs4kA9q-I0qHlOe9wTdgTBsbYitpyIpRYA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:12:00,321 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/54ff3a857e3efa0b8114eb5e7a9e7e2b6230b4ddb083254a751e44772bb99075?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1745309453&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMwOTQ1M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS81NGZmM2E4NTdlM2VmYTBiODExNGViNWU3YTllN2UyYjYyMzBiNGRkYjA4MzI1NGE3NTFlNDQ3NzJiYjk5MDc1P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=JgG%7EJUsaonrjwJKR6swtQKbkUXKhvQi3FzSeCyTrNTgzwPxrW7CdEjmDelhjbPw4w-R0CPazFfNlW6rURftOZF-Pl8HMXK%7EQl7ZJ0cU2ZmEEiMpsJL5FVKTbKi4clcfDq4fa4LYvMVp6qgaSV3BJ9-bJT9DxH1kGYB9qWpFALaQY9Y%7E82X6pksHxWdm9G%7EuXRZ6%7ET3%7EownpQjfF%7EQqISbw5Ng-1N1b1zPHN8nylBLdQc5J6Jr90EhJsLqS4xmWers6JLzm6okrc-kdLJSujzt8Z3MgEhr3Th-k%7EoUpuzAPGtKeEteuDgJmr3B0wEuhPw9MPAc6Y1cHXYeh2e0l9OVw__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:17:03,567 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:17:03,567 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:17:03,567 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:17:03,568 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:17:03,568 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:17:03,588 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:17:03,588 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:17:03,588 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:17:03,596 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:17:07,697 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:17:08,083 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:17:08,083 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:17:22,476 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:17:22,476 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:18:05,407 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:18:05,407 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:18:05,408 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:18:05,408 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:18:05,408 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:18:05,429 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:18:05,430 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:18:05,430 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:18:05,438 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:18:09,498 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:18:09,918 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:18:09,918 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:20:20,308 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:20:20,308 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:23:10,359 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:23:10,360 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:23:10,360 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:23:10,360 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:23:10,361 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:23:10,382 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:23:10,382 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:23:10,383 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:23:10,393 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:23:10,393 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 15:23:10,393 - root - WARNING - ±¾µØÄ£ĞÍÎÄ¼ş²»ÍêÕû£¬½«´ÓÍøÂçÏÂÔØÍêÕûÄ£ĞÍ
+2025-04-22 15:23:14,704 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:23:15,107 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:23:15,107 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:43:24,160 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:43:24,160 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:43:24,160 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:43:24,161 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:43:24,161 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:43:24,183 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:43:24,183 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:43:24,183 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:43:24,192 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:43:24,193 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 15:43:24,193 - root - INFO - ¼ì²âµ½Ô¤´ò°üµÄÄ£ĞÍÄ¿Â¼: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:43:24,194 - root - WARNING - Ô¤´ò°üÄ£ĞÍÎÄ¼ş²»ÍêÕû£¬½«³¢ÊÔÏÂÔØÄ£ĞÍµ½ÏîÄ¿Ä¿Â¼
+2025-04-22 15:43:24,194 - root - INFO - ÉèÖÃÄ£ĞÍÏÂÔØÄ¿Â¼Îª: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:43:24,194 - root - INFO - ¿ªÊ¼ÏÂÔØÄ£ĞÍÎÄ¼şµ½ÏîÄ¿Ä¿Â¼...
+2025-04-22 15:43:28,318 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:43:28,716 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:43:28,716 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:43:48,312 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:44:08,621 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:44:27,120 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:44:44,741 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:45:21,314 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:46:56,090 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:47:21,592 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311413&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTQxM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=SCGPKRGcOZhP6HcEiLW2YLufiNa7SCVlNGtOtUoyLD19fZQpB2ID6SI9BKy8t7EzcJe7Pj2JpwVGUxFaUAINnck9u39gUHz%7EVA8hgwTM5vcj1bOHT0uU5qAwT0oQ0vUf6mVk8qgdW7ZpcWtmFa7SHxoWt-3fSoSR1At0eNzutG4jYt9L7W1SjRzE6ENSgJouY%7EG%7EcPng%7E5oMiogsNCtjPYG7GirGHMKEMPnMv9f0h4K6GRuVq7VTfGVYu2kpbw2vsw929%7ENiWJlxxilcUNJUPfeXUcK84UMPvTCYBJKsb6h2ApP2KQaAkIIJBUS6JejbYUTjuwrUYsiAWg1oTawZNA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:47:46,794 - root - ERROR - ÏÂÔØÄ£ĞÍµ½ÏîÄ¿Ä¿Â¼Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:47:46,794 - root - WARNING - ³¢ÊÔÊ¹ÓÃÄ¬ÈÏ»º´æÄ¿Â¼ÏÂÔØÄ£ĞÍ...
+2025-04-22 15:47:46,794 - root - INFO - Ê¹ÓÃÄ£ĞÍÂ·¾¶: D:\1234\DefectAnalysis2.0\model_package\text2vec-base-chinese
+2025-04-22 15:47:46,796 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:47:46,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:47:46,979 - root - ERROR - ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍÊ§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:47:46,979 - root - INFO - ³¢ÊÔÖ±½ÓÊ¹ÓÃÔÚÏßÄ£ĞÍ...
+2025-04-22 15:47:46,981 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:47:46,981 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:47:47,009 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name shibing624/text2vec-base-chinese. Creating a new one with mean pooling.
+2025-04-22 15:47:47,133 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü: shibing624/text2vec-base-chinese does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+2025-04-22 15:47:47,133 - root - ERROR - ¹¹½¨ÏòÁ¿´æ´¢Ê§°Ü£¬³ÌĞòÍË³ö
+2025-04-22 15:52:46,742 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 15:52:46,743 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:52:46,743 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 15:52:46,743 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:52:46,743 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 15:52:46,768 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 15:52:46,768 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 15:52:46,768 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 15:52:46,778 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 15:52:46,778 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 15:52:46,779 - root - INFO - ¼ì²âµ½Ô¤´ò°üµÄÄ£ĞÍÄ¿Â¼: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:52:46,779 - root - WARNING - Ô¤´ò°üÄ£ĞÍÎÄ¼ş²»ÍêÕû£¬½«³¢ÊÔÏÂÔØÄ£ĞÍµ½ÏîÄ¿Ä¿Â¼
+2025-04-22 15:52:46,779 - root - INFO - ÉèÖÃÄ£ĞÍÏÂÔØÄ¿Â¼Îª: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:52:46,780 - root - INFO - ¿ªÊ¼ÏÂÔØÄ£ĞÍÎÄ¼şµ½ÏîÄ¿Ä¿Â¼...
+2025-04-22 15:52:50,911 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 15:52:51,341 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:52:51,341 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:53:42,857 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=uhm48tntRnUyRKfVNKM%7E83OACMTkWzkJLHOHZcY4VNaKY%7EU2%7E%7EMs8yrWQcmk49FcVXf0X2XF%7E8E2cMn%7E5e5twveu8Od2AufzVmoZyRPR9o0drXMtl4Gk3jQGZiFkA8y%7E9lg9Gqzd4C4jVk1gNtgTbiJjmo1hqLEa0cj1Nyqwu-HOnVE-KEpGCrbV7-N%7EGjiHMLYmetKisXgY536C2%7EHaaRA7BhcTEhO-jnsOv18m6GGxN1GsfMbX1ORKdtdkYZGWf2O-aJD2pwj32dCectSDEtu%7EJYuj6m0guvsvuiM6DOsq2sRCTYh84-6fNrvSjmjE%7EHjGX3c1w%7EK8OQxw5oeGXQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:54:09,153 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=uhm48tntRnUyRKfVNKM%7E83OACMTkWzkJLHOHZcY4VNaKY%7EU2%7E%7EMs8yrWQcmk49FcVXf0X2XF%7E8E2cMn%7E5e5twveu8Od2AufzVmoZyRPR9o0drXMtl4Gk3jQGZiFkA8y%7E9lg9Gqzd4C4jVk1gNtgTbiJjmo1hqLEa0cj1Nyqwu-HOnVE-KEpGCrbV7-N%7EGjiHMLYmetKisXgY536C2%7EHaaRA7BhcTEhO-jnsOv18m6GGxN1GsfMbX1ORKdtdkYZGWf2O-aJD2pwj32dCectSDEtu%7EJYuj6m0guvsvuiM6DOsq2sRCTYh84-6fNrvSjmjE%7EHjGX3c1w%7EK8OQxw5oeGXQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:55:22,125 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=uhm48tntRnUyRKfVNKM%7E83OACMTkWzkJLHOHZcY4VNaKY%7EU2%7E%7EMs8yrWQcmk49FcVXf0X2XF%7E8E2cMn%7E5e5twveu8Od2AufzVmoZyRPR9o0drXMtl4Gk3jQGZiFkA8y%7E9lg9Gqzd4C4jVk1gNtgTbiJjmo1hqLEa0cj1Nyqwu-HOnVE-KEpGCrbV7-N%7EGjiHMLYmetKisXgY536C2%7EHaaRA7BhcTEhO-jnsOv18m6GGxN1GsfMbX1ORKdtdkYZGWf2O-aJD2pwj32dCectSDEtu%7EJYuj6m0guvsvuiM6DOsq2sRCTYh84-6fNrvSjmjE%7EHjGX3c1w%7EK8OQxw5oeGXQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:56:21,952 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs.hf.co/shibing624/text2vec-base-chinese/0c855515479137398ce4ea985628548d4e8ed8c5764656dac966d6a24f39e721?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1745311976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NTMxMTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9zaGliaW5nNjI0L3RleHQydmVjLWJhc2UtY2hpbmVzZS8wYzg1NTUxNTQ3OTEzNzM5OGNlNGVhOTg1NjI4NTQ4ZDRlOGVkOGM1NzY0NjU2ZGFjOTY2ZDZhMjRmMzllNzIxP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=uhm48tntRnUyRKfVNKM%7E83OACMTkWzkJLHOHZcY4VNaKY%7EU2%7E%7EMs8yrWQcmk49FcVXf0X2XF%7E8E2cMn%7E5e5twveu8Od2AufzVmoZyRPR9o0drXMtl4Gk3jQGZiFkA8y%7E9lg9Gqzd4C4jVk1gNtgTbiJjmo1hqLEa0cj1Nyqwu-HOnVE-KEpGCrbV7-N%7EGjiHMLYmetKisXgY536C2%7EHaaRA7BhcTEhO-jnsOv18m6GGxN1GsfMbX1ORKdtdkYZGWf2O-aJD2pwj32dCectSDEtu%7EJYuj6m0guvsvuiM6DOsq2sRCTYh84-6fNrvSjmjE%7EHjGX3c1w%7EK8OQxw5oeGXQ__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-04-22 15:57:11,221 - root - INFO - Ä£ĞÍÏÂÔØ³É¹¦
+2025-04-22 15:58:13,344 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-04-22 15:58:13,345 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-04-22 15:58:13,345 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-22 15:58:13,727 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-22 15:58:13,731 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 15:58:13,805 - root - INFO - ÏòÁ¿´æ´¢¹¹½¨Íê³É
+2025-04-22 15:58:13,806 - root - INFO - ÕıÔÚ³õÊ¼»¯LLMÄ£ĞÍ...
+2025-04-22 15:58:14,273 - root - INFO - ²âÊÔLLM APIÁ¬½Ó...
+2025-04-22 15:58:15,084 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 15:59:09,099 - root - INFO - LLMÄ£ĞÍ³õÊ¼»¯³É¹¦
+2025-04-22 15:59:09,099 - root - INFO - ÕıÔÚ¶ÁÈ¡ExcelÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 15:59:14,454 - root - INFO - ExcelÎÄ¼ş°üº¬È±Ïİ±êÌâÁĞ
+2025-04-22 15:59:14,454 - root - INFO - ExcelÎÄ¼ş°üº¬ÆÀ·Ö·ÖÀàÁĞ
+2025-04-22 15:59:14,483 - root - INFO - ¹²ÓĞ 1045648 ÌõÈ±ÏİÃèÊöĞèÒª´¦Àí
+2025-04-22 15:59:14,484 - root - INFO - 
+ÕıÔÚ´¦ÀíµÚ 1/1045648 ÌõÈ±ÏİÃèÊö...
+2025-04-22 15:59:14,484 - root - INFO - ¿ªÊ¼·ÖÎöÈ±Ïİ: ÊıÖÇÈË½ÌÊ¦£¨AIÑ§Ï°»ú£©£º¶ùÍ¯ÒşË½Õş²ß±£»¤Á´½Ó¡¢ÒşË½Õş²ßÁ´½ÓÖĞµÄÓÊÏäÉ¾³ıÏÂ»®Ïß
+2025-04-22 15:59:14,484 - root - INFO - Ê¹ÓÃÌåÑéÁ¼ºÃÆÀ·Ö·ÖÀà
+2025-04-22 15:59:14,485 - root - INFO - ¿ªÊ¼¼ìË÷ÏàËÆ°¸Àı...
+2025-04-22 15:59:14,485 - root - INFO - ¸ù¾İÆÀ·Ö·ÖÀà'ÌåÑéÁ¼ºÃ'É¸Ñ¡³ö 565 ¸öÎÄµµ
+2025-04-22 15:59:14,485 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 15:59:14,486 - root - INFO - ¼ì²âµ½Ô¤´ò°üµÄÄ£ĞÍÄ¿Â¼: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:59:14,486 - root - WARNING - Ô¤´ò°üÄ£ĞÍÎÄ¼ş²»ÍêÕû£¬½«³¢ÊÔÏÂÔØÄ£ĞÍµ½ÏîÄ¿Ä¿Â¼
+2025-04-22 15:59:14,486 - root - INFO - ÉèÖÃÄ£ĞÍÏÂÔØÄ¿Â¼Îª: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 15:59:14,486 - root - INFO - ¿ªÊ¼ÏÂÔØÄ£ĞÍÎÄ¼şµ½ÏîÄ¿Ä¿Â¼...
+2025-04-22 15:59:14,489 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 15:59:14,489 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 15:59:17,881 - root - INFO - Ä£ĞÍÏÂÔØ³É¹¦
+2025-04-22 15:59:30,703 - root - INFO - ¼ìË÷µ½ 8 ¸öºòÑ¡°¸Àı
+2025-04-22 15:59:30,704 - root - INFO - °¸Àı1ÏàËÆ¶È: 0.95%
+2025-04-22 15:59:30,705 - root - INFO - °¸Àı2ÏàËÆ¶È: 0.92%
+2025-04-22 15:59:30,705 - root - INFO - °¸Àı3ÏàËÆ¶È: 0.84%
+2025-04-22 15:59:30,705 - root - INFO - ÕıÔÚ¼ÓÔØÏµÍ³ÌáÊ¾ÎÄ¼ş: D:\1234\DefectAnalysis2.0\sys2.md
+2025-04-22 15:59:30,706 - root - INFO - ÏµÍ³ÌáÊ¾ÎÄ¼ş¼ÓÔØ³É¹¦: D:\1234\DefectAnalysis2.0\sys2.md
+2025-04-22 15:59:30,706 - root - INFO - Ê¹ÓÃÏµÍ³ÌáÊ¾´Ê: sys2.md
+2025-04-22 15:59:30,706 - root - INFO - ¿ªÊ¼µ÷ÓÃLLM½øĞĞ·ÖÎö...
+2025-04-22 15:59:31,299 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:00:44,830 - root - INFO - LLM·ÖÎöÍê³É
+2025-04-22 16:00:44,831 - root - INFO - µÚ 1 Ìõ´¦ÀíÍê³É
+2025-04-22 16:00:44,835 - root - INFO - 
+ÕıÔÚ´¦ÀíµÚ 2/1045648 ÌõÈ±ÏİÃèÊö...
+2025-04-22 16:00:44,835 - root - INFO - ¿ªÊ¼·ÖÎöÈ±Ïİ: ÊıÖÇÈË½ÌÊ¦£¨AIÑ§Ï°»ú£©£º¹Ø±ÕÉãÏñÍ·È¨ÏŞ£¬Ğ¡³ÌĞòÖ÷Ò³Ìí¼ÓÉè±¸£¬ÎŞ¡°ÌáÊ¾ĞèÒª»ñÈ¡ÉãÏñÍ·È¨ÏŞ¡±
+2025-04-22 16:00:44,836 - root - INFO - Ê¹ÓÃÌåÑéÁ¼ºÃÆÀ·Ö·ÖÀà
+2025-04-22 16:00:44,836 - root - INFO - ¿ªÊ¼¼ìË÷ÏàËÆ°¸Àı...
+2025-04-22 16:00:44,836 - root - INFO - ¸ù¾İÆÀ·Ö·ÖÀà'ÌåÑéÁ¼ºÃ'É¸Ñ¡³ö 565 ¸öÎÄµµ
+2025-04-22 16:00:44,837 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 16:00:44,837 - root - INFO - ¼ì²âµ½Ô¤´ò°üµÄÄ£ĞÍÄ¿Â¼: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 16:00:44,837 - root - WARNING - Ô¤´ò°üÄ£ĞÍÎÄ¼ş²»ÍêÕû£¬½«³¢ÊÔÏÂÔØÄ£ĞÍµ½ÏîÄ¿Ä¿Â¼
+2025-04-22 16:00:44,838 - root - INFO - ÉèÖÃÄ£ĞÍÏÂÔØÄ¿Â¼Îª: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 16:00:44,838 - root - INFO - ¿ªÊ¼ÏÂÔØÄ£ĞÍÎÄ¼şµ½ÏîÄ¿Ä¿Â¼...
+2025-04-22 16:00:44,840 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 16:00:44,840 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:00:48,104 - root - INFO - Ä£ĞÍÏÂÔØ³É¹¦
+2025-04-22 16:01:00,562 - root - INFO - ¼ìË÷µ½ 8 ¸öºòÑ¡°¸Àı
+2025-04-22 16:01:00,562 - root - INFO - °¸Àı1ÏàËÆ¶È: 1.24%
+2025-04-22 16:01:00,563 - root - INFO - °¸Àı2ÏàËÆ¶È: 1.12%
+2025-04-22 16:01:00,563 - root - INFO - °¸Àı3ÏàËÆ¶È: 1.04%
+2025-04-22 16:01:00,563 - root - INFO - ÕıÔÚ¼ÓÔØÏµÍ³ÌáÊ¾ÎÄ¼ş: D:\1234\DefectAnalysis2.0\sys2.md
+2025-04-22 16:01:00,564 - root - INFO - ÏµÍ³ÌáÊ¾ÎÄ¼ş¼ÓÔØ³É¹¦: D:\1234\DefectAnalysis2.0\sys2.md
+2025-04-22 16:01:00,564 - root - INFO - Ê¹ÓÃÏµÍ³ÌáÊ¾´Ê: sys2.md
+2025-04-22 16:01:00,564 - root - INFO - ¿ªÊ¼µ÷ÓÃLLM½øĞĞ·ÖÎö...
+2025-04-22 16:01:01,174 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:07:58,506 - root - INFO - === ÖÇÄÜÈ±Ïİ·ÖÎöÏµÍ³Æô¶¯ ===
+2025-04-22 16:07:58,506 - root - INFO - ÊäÈëÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ1.xlsx
+2025-04-22 16:07:58,506 - root - INFO - Êä³öÎÄ¼ş: D:\1234\DefectAnalysis2.0\È±Ïİ·ÖÎö½á¹û.xlsx
+2025-04-22 16:07:58,506 - root - INFO - ÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 16:07:58,507 - root - INFO - ÕıÔÚ¼ÓÔØÖªÊ¶¿âÎÄ¼ş: D:\1234\DefectAnalysis2.0\defects_knowledge_base.json
+2025-04-22 16:07:58,528 - root - INFO - ÖªÊ¶¿â¼ÓÔØ³É¹¦£¬°üº¬ 2646 ÌõÈ±Ïİ¼ÇÂ¼
+2025-04-22 16:07:58,528 - root - INFO - ¿ªÊ¼¹¹½¨ÏòÁ¿´æ´¢...
+2025-04-22 16:07:58,529 - root - INFO - ¹²ÓĞ 2646 ÌõÈ±Ïİ¼ÇÂ¼ĞèÒª´¦Àí
+2025-04-22 16:07:58,541 - root - INFO - ³É¹¦´¦Àí 2646 ÌõÓĞĞ§È±Ïİ¼ÇÂ¼£¬¿ªÊ¼¹¹½¨ÏòÁ¿Ë÷Òı...
+2025-04-22 16:07:58,541 - root - INFO - ÕıÔÚ³õÊ¼»¯ÏòÁ¿»¯Ä£ĞÍ...
+2025-04-22 16:07:58,542 - root - INFO - ÉèÖÃÄ£ĞÍ»º´æ/ÏÂÔØÄ¿Â¼Îª: D:\1234\DefectAnalysis2.0\model_package
+2025-04-22 16:07:58,542 - root - INFO - ³¢ÊÔ´Ó D:\1234\DefectAnalysis2.0\model_package ¼ÓÔØ»òÏÂÔØÄ£ĞÍ shibing624/text2vec-base-chinese...
+2025-04-22 16:08:02,644 - datasets - INFO - PyTorch version 2.6.0 available.
+2025-04-22 16:08:03,057 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-22 16:08:03,058 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:08:06,957 - root - INFO - ÏòÁ¿»¯Ä£ĞÍ³õÊ¼»¯³É¹¦
+2025-04-22 16:09:07,891 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-04-22 16:09:07,892 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-04-22 16:09:07,892 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-04-22 16:09:07,943 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-04-22 16:09:07,948 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 16:09:08,045 - root - INFO - ÏòÁ¿´æ´¢¹¹½¨Íê³É
+2025-04-22 16:09:08,046 - root - INFO - ÕıÔÚ³õÊ¼»¯LLMÄ£ĞÍ...
+2025-04-22 16:09:08,525 - root - INFO - ²âÊÔLLM APIÁ¬½Ó...
+2025-04-22 16:09:09,326 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:13:42,936 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 16:13:42,937 - root - INFO - è¾“å…¥æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:13:42,937 - root - INFO - è¾“å‡ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 16:13:42,937 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:13:42,937 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:13:42,953 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 16:13:42,953 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 16:13:42,953 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 16:13:42,978 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 16:13:42,978 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:13:42,978 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:13:42,978 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:13:44,672 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:14:59,687 - root - ERROR - åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹å¤±è´¥: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/shibing624/text2vec-base-chinese (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x16535d8e0>: Failed to establish a new connection: [Errno 60] Operation timed out'))"), '(Request ID: 2c42963c-d5bc-4cc4-8f2d-d14e5a2e5f24)')
+2025-04-22 16:14:59,689 - root - ERROR - è¯·æ£€æŸ¥ç½‘ç»œè¿æ¥æˆ–æœ¬åœ°æ¨¡å‹æ–‡ä»¶æ˜¯å¦å®Œæ•´ã€‚
+2025-04-22 16:14:59,689 - root - ERROR - æ„å»ºå‘é‡å­˜å‚¨å¤±è´¥: 'NoneType' object has no attribute 'embed_documents'
+2025-04-22 16:14:59,689 - root - ERROR - æ„å»ºå‘é‡å­˜å‚¨å¤±è´¥ï¼Œç¨‹åºé€€å‡º
+2025-04-22 16:16:02,723 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 16:16:02,723 - root - INFO - è¾“å…¥æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:16:02,723 - root - INFO - è¾“å‡ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 16:16:02,723 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:16:02,723 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:16:02,738 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 16:16:02,738 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 16:16:02,738 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 16:16:02,751 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 16:16:02,751 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:16:02,751 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:16:02,751 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:16:04,289 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:17:19,294 - root - ERROR - åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹å¤±è´¥: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/shibing624/text2vec-base-chinese (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x165129910>: Failed to establish a new connection: [Errno 60] Operation timed out'))"), '(Request ID: e8196c86-9a4d-44a1-95e9-ee9445d2a7e6)')
+2025-04-22 16:17:19,296 - root - ERROR - è¯·æ£€æŸ¥ç½‘ç»œè¿æ¥æˆ–æœ¬åœ°æ¨¡å‹æ–‡ä»¶æ˜¯å¦å®Œæ•´ã€‚
+2025-04-22 16:17:19,296 - root - ERROR - æ„å»ºå‘é‡å­˜å‚¨å¤±è´¥: 'NoneType' object has no attribute 'embed_documents'
+2025-04-22 16:17:19,296 - root - ERROR - æ„å»ºå‘é‡å­˜å‚¨å¤±è´¥ï¼Œç¨‹åºé€€å‡º
+2025-04-22 16:17:27,896 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 16:17:27,896 - root - INFO - è¾“å…¥æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:17:27,896 - root - INFO - è¾“å‡ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 16:17:27,896 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:17:27,896 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:17:27,913 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 16:17:27,913 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 16:17:27,914 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 16:17:27,925 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 16:17:27,925 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:17:27,925 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:17:27,925 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:17:29,335 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:54:08,030 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:54:08,033 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:55:16,831 - faiss.loader - INFO - Loading faiss.
+2025-04-22 16:55:16,909 - faiss.loader - INFO - Successfully loaded faiss.
+2025-04-22 16:55:16,913 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 16:55:16,968 - root - INFO - å‘é‡å­˜å‚¨æ„å»ºå®Œæˆ
+2025-04-22 16:55:16,968 - root - INFO - æ­£åœ¨åˆå§‹åŒ–LLMæ¨¡å‹...
+2025-04-22 16:55:17,010 - root - INFO - æµ‹è¯•LLM APIè¿æ¥...
+2025-04-22 16:55:17,845 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:55:51,310 - root - INFO - LLMæ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:55:51,311 - root - INFO - æ­£åœ¨è¯»å–Excelæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:55:51,411 - root - INFO - Excelæ–‡ä»¶åŒ…å«ç¼ºé™·æ ‡é¢˜åˆ—
+2025-04-22 16:55:51,411 - root - INFO - Excelæ–‡ä»¶åŒ…å«è¯„åˆ†åˆ†ç±»åˆ—
+2025-04-22 16:55:51,416 - root - INFO - å…±æœ‰ 5 æ¡ç¼ºé™·æè¿°éœ€è¦å¤„ç†
+2025-04-22 16:55:51,416 - root - INFO - 
+æ­£åœ¨å¤„ç†ç¬¬ 1/5 æ¡ç¼ºé™·æè¿°...
+2025-04-22 16:55:51,416 - root - INFO - å¼€å§‹åˆ†æç¼ºé™·: æ•°æ™ºäººæ•™å¸ˆï¼ˆAIå­¦ä¹ æœºï¼‰ï¼šå„¿ç«¥éšç§æ”¿ç­–ä¿æŠ¤é“¾æ¥ã€éšç§æ”¿ç­–é“¾æ¥ä¸­çš„é‚®ç®±åˆ é™¤ä¸‹åˆ’çº¿
+2025-04-22 16:55:51,416 - root - INFO - ä½¿ç”¨ä½“éªŒè‰¯å¥½è¯„åˆ†åˆ†ç±»
+2025-04-22 16:55:51,416 - root - INFO - å¼€å§‹æ£€ç´¢ç›¸ä¼¼æ¡ˆä¾‹...
+2025-04-22 16:55:51,418 - root - INFO - æ ¹æ®è¯„åˆ†åˆ†ç±»'ä½“éªŒè‰¯å¥½'ç­›é€‰å‡º 565 ä¸ªæ–‡æ¡£
+2025-04-22 16:55:51,418 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:55:51,418 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:55:51,418 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:55:51,418 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:55:52,819 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:55:52,819 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:56:07,661 - root - INFO - æ£€ç´¢åˆ° 8 ä¸ªå€™é€‰æ¡ˆä¾‹
+2025-04-22 16:56:07,661 - root - INFO - æ¡ˆä¾‹1ç›¸ä¼¼åº¦: 0.95%
+2025-04-22 16:56:07,662 - root - INFO - æ¡ˆä¾‹2ç›¸ä¼¼åº¦: 0.92%
+2025-04-22 16:56:07,662 - root - INFO - æ¡ˆä¾‹3ç›¸ä¼¼åº¦: 0.84%
+2025-04-22 16:56:07,662 - root - INFO - æ­£åœ¨åŠ è½½ç³»ç»Ÿæç¤ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys2.md
+2025-04-22 16:56:07,662 - root - INFO - ç³»ç»Ÿæç¤ºæ–‡ä»¶åŠ è½½æˆåŠŸ: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys2.md
+2025-04-22 16:56:07,662 - root - INFO - ä½¿ç”¨ç³»ç»Ÿæç¤ºè¯: sys2.md
+2025-04-22 16:56:07,662 - root - INFO - å¼€å§‹è°ƒç”¨LLMè¿›è¡Œåˆ†æ...
+2025-04-22 16:56:08,265 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:56:42,553 - root - INFO - LLMåˆ†æå®Œæˆ
+2025-04-22 16:56:42,583 - root - INFO - ç¬¬ 1 æ¡å¤„ç†å®Œæˆ
+2025-04-22 16:56:42,588 - root - INFO - 
+æ­£åœ¨å¤„ç†ç¬¬ 2/5 æ¡ç¼ºé™·æè¿°...
+2025-04-22 16:56:42,588 - root - INFO - å¼€å§‹åˆ†æç¼ºé™·: æ•°æ™ºäººæ•™å¸ˆï¼ˆAIå­¦ä¹ æœºï¼‰ï¼šå…³é—­æ‘„åƒå¤´æƒé™ï¼Œå°ç¨‹åºä¸»é¡µæ·»åŠ è®¾å¤‡ï¼Œæ— â€œæç¤ºéœ€è¦è·å–æ‘„åƒå¤´æƒé™â€
+2025-04-22 16:56:42,588 - root - INFO - ä½¿ç”¨ä½“éªŒè‰¯å¥½è¯„åˆ†åˆ†ç±»
+2025-04-22 16:56:42,588 - root - INFO - å¼€å§‹æ£€ç´¢ç›¸ä¼¼æ¡ˆä¾‹...
+2025-04-22 16:56:42,589 - root - INFO - æ ¹æ®è¯„åˆ†åˆ†ç±»'ä½“éªŒè‰¯å¥½'ç­›é€‰å‡º 565 ä¸ªæ–‡æ¡£
+2025-04-22 16:56:42,589 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:56:42,589 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:56:42,589 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:56:42,589 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:56:43,469 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:56:43,469 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:57:08,255 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 16:57:08,256 - root - INFO - è¾“å…¥æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:57:08,256 - root - INFO - è¾“å‡ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 16:57:08,256 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:57:08,256 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 16:57:08,275 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 16:57:08,275 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 16:57:08,275 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 16:57:08,294 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 16:57:08,295 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:57:08,295 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:57:08,295 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:57:09,896 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:57:11,192 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:57:11,192 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:58:16,373 - faiss.loader - INFO - Loading faiss.
+2025-04-22 16:58:16,405 - faiss.loader - INFO - Successfully loaded faiss.
+2025-04-22 16:58:16,409 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 16:58:16,466 - root - INFO - å‘é‡å­˜å‚¨æ„å»ºå®Œæˆ
+2025-04-22 16:58:16,466 - root - INFO - æ­£åœ¨åˆå§‹åŒ–LLMæ¨¡å‹...
+2025-04-22 16:58:16,502 - root - INFO - æµ‹è¯•LLM APIè¿æ¥...
+2025-04-22 16:58:16,665 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:58:36,366 - root - INFO - LLMæ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:58:36,367 - root - INFO - æ­£åœ¨è¯»å–Excelæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 16:58:36,461 - root - INFO - Excelæ–‡ä»¶åŒ…å«ç¼ºé™·æ ‡é¢˜åˆ—
+2025-04-22 16:58:36,462 - root - INFO - Excelæ–‡ä»¶åŒ…å«è¯„åˆ†åˆ†ç±»åˆ—
+2025-04-22 16:58:36,464 - root - INFO - å…±æœ‰ 2 æ¡ç¼ºé™·æè¿°éœ€è¦å¤„ç†
+2025-04-22 16:58:36,464 - root - INFO - 
+æ­£åœ¨å¤„ç†ç¬¬ 1/2 æ¡ç¼ºé™·æè¿°...
+2025-04-22 16:58:36,464 - root - INFO - å¼€å§‹åˆ†æç¼ºé™·: æ•°æ™ºäººæ•™å¸ˆï¼ˆAIå­¦ä¹ æœºï¼‰ï¼šéœ€æ±‚ä¸­ç™»å½•æŒ‰é’®æ–‡å­—æè¿°æ˜¯ä¸€é”®ç™»å½•æŒ‰é’®ï¼Œå®é™…ä¸ºæ‰‹æœºå·å¿«æ·ç™»å½•
+2025-04-22 16:58:36,464 - root - INFO - ä½¿ç”¨åŠŸèƒ½ä½¿ç”¨è¯„åˆ†åˆ†ç±»
+2025-04-22 16:58:36,464 - root - INFO - å¼€å§‹æ£€ç´¢ç›¸ä¼¼æ¡ˆä¾‹...
+2025-04-22 16:58:36,465 - root - INFO - æ ¹æ®è¯„åˆ†åˆ†ç±»'åŠŸèƒ½ä½¿ç”¨'ç­›é€‰å‡º 1975 ä¸ªæ–‡æ¡£
+2025-04-22 16:58:36,465 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:58:36,465 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:58:36,465 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:58:36,465 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:58:37,441 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:58:37,441 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 16:59:26,087 - root - INFO - æ£€ç´¢åˆ° 8 ä¸ªå€™é€‰æ¡ˆä¾‹
+2025-04-22 16:59:26,088 - root - INFO - æ¡ˆä¾‹1ç›¸ä¼¼åº¦: 1.50%
+2025-04-22 16:59:26,088 - root - INFO - æ¡ˆä¾‹2ç›¸ä¼¼åº¦: 1.36%
+2025-04-22 16:59:26,088 - root - INFO - æ¡ˆä¾‹3ç›¸ä¼¼åº¦: 1.24%
+2025-04-22 16:59:26,088 - root - INFO - æ­£åœ¨åŠ è½½ç³»ç»Ÿæç¤ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys.md
+2025-04-22 16:59:26,089 - root - INFO - ç³»ç»Ÿæç¤ºæ–‡ä»¶åŠ è½½æˆåŠŸ: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys.md
+2025-04-22 16:59:26,089 - root - INFO - ä½¿ç”¨ç³»ç»Ÿæç¤ºè¯: sys.md
+2025-04-22 16:59:26,089 - root - INFO - å¼€å§‹è°ƒç”¨LLMè¿›è¡Œåˆ†æ...
+2025-04-22 16:59:26,231 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 16:59:56,297 - root - INFO - LLMåˆ†æå®Œæˆ
+2025-04-22 16:59:56,327 - root - INFO - ç¬¬ 1 æ¡å¤„ç†å®Œæˆ
+2025-04-22 16:59:56,331 - root - INFO - 
+æ­£åœ¨å¤„ç†ç¬¬ 2/2 æ¡ç¼ºé™·æè¿°...
+2025-04-22 16:59:56,331 - root - INFO - å¼€å§‹åˆ†æç¼ºé™·: æ•°æ™ºäººæ•™å¸ˆï¼ˆAIå­¦ä¹ æœºï¼‰ï¼šå»ºè®®æ¿€æ´»ç»ˆç«¯å‹å·å æ¯”ä¸­çš„æ¿€æ´»ç»ˆç«¯æ€»æ•°åé¢å¢åŠ å•ä½ï¼ˆå°ï¼‰
+2025-04-22 16:59:56,331 - root - INFO - ä½¿ç”¨ä½“éªŒè‰¯å¥½è¯„åˆ†åˆ†ç±»
+2025-04-22 16:59:56,331 - root - INFO - å¼€å§‹æ£€ç´¢ç›¸ä¼¼æ¡ˆä¾‹...
+2025-04-22 16:59:56,332 - root - INFO - æ ¹æ®è¯„åˆ†åˆ†ç±»'ä½“éªŒè‰¯å¥½'ç­›é€‰å‡º 565 ä¸ªæ–‡æ¡£
+2025-04-22 16:59:56,332 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 16:59:56,332 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 16:59:56,332 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 16:59:56,332 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 16:59:57,210 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 16:59:57,210 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 17:00:11,165 - root - INFO - æ£€ç´¢åˆ° 8 ä¸ªå€™é€‰æ¡ˆä¾‹
+2025-04-22 17:00:11,165 - root - INFO - æ¡ˆä¾‹1ç›¸ä¼¼åº¦: 1.14%
+2025-04-22 17:00:11,165 - root - INFO - æ¡ˆä¾‹2ç›¸ä¼¼åº¦: 1.07%
+2025-04-22 17:00:11,165 - root - INFO - æ¡ˆä¾‹3ç›¸ä¼¼åº¦: 1.06%
+2025-04-22 17:00:11,165 - root - INFO - æ­£åœ¨åŠ è½½ç³»ç»Ÿæç¤ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys2.md
+2025-04-22 17:00:11,166 - root - INFO - ç³»ç»Ÿæç¤ºæ–‡ä»¶åŠ è½½æˆåŠŸ: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/sys2.md
+2025-04-22 17:00:11,166 - root - INFO - ä½¿ç”¨ç³»ç»Ÿæç¤ºè¯: sys2.md
+2025-04-22 17:00:11,166 - root - INFO - å¼€å§‹è°ƒç”¨LLMè¿›è¡Œåˆ†æ...
+2025-04-22 17:00:11,331 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 17:00:48,697 - root - INFO - LLMåˆ†æå®Œæˆ
+2025-04-22 17:00:48,729 - root - INFO - ç¬¬ 2 æ¡å¤„ç†å®Œæˆ
+2025-04-22 17:00:48,731 - root - INFO - æ­£åœ¨ä¿å­˜ç»“æœåˆ°: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 17:00:48,767 - root - INFO - åˆ†æå®Œæˆï¼ç»“æœå·²ä¿å­˜åˆ° /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 17:00:48,775 - root - INFO - ç›¸ä¼¼æ¡ˆä¾‹å·²ä¿å­˜åˆ°: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ_ç›¸ä¼¼æ¡ˆä¾‹.xlsx
+2025-04-22 17:03:03,388 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 17:03:03,388 - root - INFO - è¾“å…¥æ–‡ä»¶: /var/folders/rz/h1c4phvd12152pyf2fyq1xsc0000gn/T/tmpkm95207g.xlsx
+2025-04-22 17:03:03,388 - root - INFO - è¾“å‡ºæ–‡ä»¶: /var/folders/rz/h1c4phvd12152pyf2fyq1xsc0000gn/T/tmp58_82dza.xlsx
+2025-04-22 17:03:03,388 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 17:03:03,388 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 17:03:03,404 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 17:03:03,404 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 17:03:03,404 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 17:03:03,415 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 17:03:03,415 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 17:03:03,415 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 17:03:03,415 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 17:03:04,900 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 17:03:06,108 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 17:03:06,108 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 17:04:10,328 - faiss.loader - INFO - Loading faiss.
+2025-04-22 17:04:10,358 - faiss.loader - INFO - Successfully loaded faiss.
+2025-04-22 17:04:10,362 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 17:04:10,411 - root - INFO - å‘é‡å­˜å‚¨æ„å»ºå®Œæˆ
+2025-04-22 17:04:10,411 - root - INFO - æ­£åœ¨åˆå§‹åŒ–LLMæ¨¡å‹...
+2025-04-22 17:04:10,442 - root - INFO - æµ‹è¯•LLM APIè¿æ¥...
+2025-04-22 17:04:10,594 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-22 17:23:38,708 - root - INFO - === æ™ºèƒ½ç¼ºé™·åˆ†æç³»ç»Ÿå¯åŠ¨ ===
+2025-04-22 17:23:38,709 - root - INFO - è¾“å…¥æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·1.xlsx
+2025-04-22 17:23:38,709 - root - INFO - è¾“å‡ºæ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/ç¼ºé™·åˆ†æç»“æœ.xlsx
+2025-04-22 17:23:38,709 - root - INFO - çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 17:23:38,709 - root - INFO - æ­£åœ¨åŠ è½½çŸ¥è¯†åº“æ–‡ä»¶: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/defects_knowledge_base.json
+2025-04-22 17:23:38,724 - root - INFO - çŸ¥è¯†åº“åŠ è½½æˆåŠŸï¼ŒåŒ…å« 2646 æ¡ç¼ºé™·è®°å½•
+2025-04-22 17:23:38,724 - root - INFO - å¼€å§‹æ„å»ºå‘é‡å­˜å‚¨...
+2025-04-22 17:23:38,724 - root - INFO - å…±æœ‰ 2646 æ¡ç¼ºé™·è®°å½•éœ€è¦å¤„ç†
+2025-04-22 17:23:38,738 - root - INFO - æˆåŠŸå¤„ç† 2646 æ¡æœ‰æ•ˆç¼ºé™·è®°å½•ï¼Œå¼€å§‹æ„å»ºå‘é‡ç´¢å¼•...
+2025-04-22 17:23:38,738 - root - INFO - æ­£åœ¨åˆå§‹åŒ–å‘é‡åŒ–æ¨¡å‹...
+2025-04-22 17:23:38,738 - root - INFO - è®¾ç½®æ¨¡å‹ç¼“å­˜/ä¸‹è½½ç›®å½•ä¸º: /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package
+2025-04-22 17:23:38,738 - root - INFO - å°è¯•ä» /Users/lpd/Documents/project/quexian_ai/AIpro/æ•°æ®åˆ†ææ™ºèƒ½å·¥å…·/ai/DefectAnalysis/DefectAnalysis2.0/model_package åŠ è½½æˆ–ä¸‹è½½æ¨¡å‹ shibing624/text2vec-base-chinese...
+2025-04-22 17:23:40,200 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: shibing624/text2vec-base-chinese
+2025-04-22 17:23:41,455 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-04-22 17:23:41,455 - root - INFO - å‘é‡åŒ–æ¨¡å‹åˆå§‹åŒ–æˆåŠŸ
+2025-04-22 17:24:44,611 - faiss.loader - INFO - Loading faiss.
+2025-04-22 17:24:44,641 - faiss.loader - INFO - Successfully loaded faiss.
+2025-04-22 17:24:44,644 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-22 17:24:44,702 - root - INFO - å‘é‡å­˜å‚¨æ„å»ºå®Œæˆ
+2025-04-22 17:24:44,702 - root - INFO - æ­£åœ¨åˆå§‹åŒ–LLMæ¨¡å‹...
+2025-04-22 17:24:44,737 - root - INFO - æµ‹è¯•LLM APIè¿æ¥...
+2025-04-22 17:24:44,897 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"

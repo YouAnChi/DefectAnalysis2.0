@@ -3,8 +3,8 @@ import os
 import logging
 import pandas as pd
 from langchain_deepseek import ChatDeepSeek
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from tqdm import tqdm
 
 # 配置日志
@@ -37,7 +37,44 @@ def init_llm():
 
 # 初始化向量化模型
 def init_embeddings():
-    return HuggingFaceEmbeddings(model_name='shibing624/text2vec-base-chinese')
+    try:
+        logging.info("正在初始化向量化模型...")
+        # 获取当前脚本所在目录
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # 定义模型名称和本地存储路径
+        model_name = 'shibing624/text2vec-base-chinese'
+        model_package_dir = os.path.join(current_dir, 'model_package')
+        
+        # 确保模型存储目录存在
+        os.makedirs(model_package_dir, exist_ok=True)
+        
+        # 设置HuggingFace环境变量，强制使用本地目录
+        os.environ['TRANSFORMERS_CACHE'] = model_package_dir
+        os.environ['HF_HOME'] = model_package_dir
+        os.environ['HF_DATASETS_CACHE'] = os.path.join(model_package_dir, 'datasets')
+        # 禁用网络下载，如果本地模型不完整则会报错
+        # os.environ['HF_HUB_OFFLINE'] = '1' # 部署时可以考虑启用
+        
+        logging.info(f"设置模型缓存/下载目录为: {model_package_dir}")
+        
+        # 尝试加载模型，HuggingFaceEmbeddings会自动处理缓存和下载
+        logging.info(f"尝试从 {model_package_dir} 加载或下载模型 {model_name}...")
+        embeddings = HuggingFaceEmbeddings(
+            model_name=model_name,
+            cache_folder=model_package_dir
+        )
+        logging.info("向量化模型初始化成功")
+        return embeddings
+        
+    except Exception as e:
+        logging.error(f"初始化向量化模型失败: {str(e)}")
+        logging.error("请检查网络连接或本地模型文件是否完整。")
+        # 在部署环境中，如果模型加载失败，应该直接退出或抛出异常
+        # return None # 或者 raise e
+        # 为了本地开发方便，暂时返回None
+        return None
+
 
 # 加载知识库
 def load_knowledge_base(file_path):
@@ -165,7 +202,7 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
         if not similar_docs:
             try:
                 # 先根据评分分类筛选知识库中的文档
-                from langchain.schema import Document
+                from langchain_core.documents import Document
                 filtered_docs = []
                 
                 # 获取向量存储中的所有文档
@@ -187,7 +224,7 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
                     )
                 else:
                     # 创建临时向量存储用于检索
-                    from langchain.vectorstores import FAISS
+                    from langchain_community.vectorstores import FAISS
                     embeddings = init_embeddings()
                     texts = [doc.page_content for doc in filtered_docs]
                     metadatas = [doc.metadata for doc in filtered_docs]
