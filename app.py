@@ -12,7 +12,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("defect_analysis.log"),
+        logging.FileHandler("defect_analysis.log", encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -60,10 +60,16 @@ def init_embeddings():
         
         # 尝试加载模型，HuggingFaceEmbeddings会自动处理缓存和下载
         logging.info(f"尝试从 {model_package_dir} 加载或下载模型 {model_name}...")
-        embeddings = HuggingFaceEmbeddings(
-            model_name=model_name,
-            cache_folder=model_package_dir
-        )
+        try:
+            embeddings = HuggingFaceEmbeddings(
+                model_name=model_name,
+                cache_folder=model_package_dir
+            )
+            logging.info(f"HuggingFaceEmbeddings 对象创建成功: {model_name}")
+        except Exception as emb_e:
+            logging.error(f"创建 HuggingFaceEmbeddings 对象时出错: {str(emb_e)}", exc_info=True)
+            raise emb_e # 重新抛出异常，以便上层捕获
+        logging.info("向量化模型初始化成功")
         logging.info("向量化模型初始化成功")
         return embeddings
         
@@ -138,7 +144,16 @@ def build_vector_store(_knowledge_base):
         
         logging.info(f"成功处理 {len(texts)} 条有效缺陷记录，开始构建向量索引...")
         embeddings = init_embeddings()
-        vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
+        if not embeddings:
+            logging.error("无法获取向量化模型，向量存储构建中止")
+            return None
+        logging.info(f"开始调用 FAISS.from_texts 构建向量存储，共 {len(texts)} 个文本...")
+        try:
+            vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
+            logging.info("FAISS.from_texts 调用完成")
+        except Exception as faiss_e:
+            logging.error(f"调用 FAISS.from_texts 时出错: {str(faiss_e)}", exc_info=True)
+            return None
         logging.info("向量存储构建完成")
         return vector_store
     except Exception as e:
@@ -218,23 +233,41 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
                 # 如果筛选后的文档数量太少，则使用原始检索
                 if len(filtered_docs) < 5:
                     logging.info(f"筛选后文档数量不足，使用原始检索")
+                    logging.info(f"在原始向量存储中执行 similarity_search_with_score (k=8)...")
                     similar_docs = vector_store.similarity_search_with_score(
                         defect_description,
                         k=8
                     )
+                    logging.info(f"原始向量存储检索完成，找到 {len(similar_docs)} 个结果。")
                 else:
                     # 创建临时向量存储用于检索
+                    logging.info("开始创建临时向量存储...")
                     from langchain_community.vectorstores import FAISS
                     embeddings = init_embeddings()
                     texts = [doc.page_content for doc in filtered_docs]
                     metadatas = [doc.metadata for doc in filtered_docs]
-                    temp_vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
-                    
+                    logging.info(f"准备使用 {len(texts)} 个文本和 {len(metadatas)} 个元数据创建临时 FAISS 索引")
+                    try:
+                        temp_vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
+                        logging.info("临时向量存储创建成功")
+                    except Exception as temp_faiss_e:
+                        logging.error(f"创建临时 FAISS 索引时出错: {str(temp_faiss_e)}", exc_info=True)
+                        # 如果临时索引创建失败，可以考虑回退到原始检索或直接报错
+                        logging.warning("临时索引创建失败，将尝试在原始向量存储中检索")
+                        similar_docs = vector_store.similarity_search_with_score(defect_description, k=8)
+                        logging.info(f"回退到原始向量存储检索完成，找到 {len(similar_docs)} 个结果。")
+                        temp_vector_store = None # 标记临时存储不可用
+
                     # 在筛选后的文档中进行相似度检索
+                    if temp_vector_store:
+                     logging.info("开始在临时向量存储中进行相似度检索...")
+                    logging.info(f"在临时向量存储中执行 similarity_search_with_score (k=8)...")
                     similar_docs = temp_vector_store.similarity_search_with_score(
                         defect_description,
                         k=8
                     )
+                    logging.info(f"临时向量存储检索完成，找到 {len(similar_docs)} 个结果。")
+                    logging.info("临时向量存储检索完成")
                 
                 logging.info(f"检索到 {len(similar_docs)} 个候选案例")
                 

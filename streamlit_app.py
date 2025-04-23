@@ -25,7 +25,7 @@ st.set_page_config(
 def display_logo():
     logo_path = Path(__file__).parent / "logo.svg"
     if logo_path.exists():
-        with open(logo_path, "r") as f:
+        with open(logo_path, "r", encoding="utf-8") as f:
             svg = f.read()
             b64 = base64.b64encode(svg.encode()).decode()
             return f'<img src="data:image/svg+xml;base64,{b64}" class="logo-img" alt="Logo"/>'
@@ -63,7 +63,7 @@ log_queue = queue.Queue()
 # 定义一个函数来读取日志文件并将新行添加到队列中
 def tail_log_file(log_file_path, q):
     try:
-        with open(log_file_path, 'r', encoding='utf-8') as f:
+        with open(log_file_path, 'r', encoding='utf-8', errors='ignore') as f:
             # 移动到文件末尾
             f.seek(0, 2)
             while True:
@@ -333,6 +333,8 @@ def main():
                 logging.warning(f"读取Excel文件时出错: {str(e)}，将使用默认系统提示词文件")
             
             # 启动子进程
+            logging.info(f"准备执行命令: {' '.join(cmd)}")
+            st.info(f"开始执行分析子进程...")
             with st.spinner("正在分析中..."):
                 process = subprocess.Popen(
                     cmd,
@@ -375,6 +377,23 @@ def main():
                         except queue.Empty:
                             pass
                         
+                        # 尝试从队列获取日志
+                        # logging.debug("检查日志队列...") # 调试日志，可能过于频繁
+                        try:
+                            while not log_queue.empty():
+                                log_line = log_queue.get_nowait()
+                                all_logs.append(log_line)
+                                new_logs_added = True
+                                # 如果日志行数超过最大限制，则保留最新的日志
+                                if len(all_logs) > max_log_lines:
+                                    all_logs = all_logs[-max_log_lines:]
+                        except queue.Empty:
+                            pass
+                        except Exception as q_err:
+                            logging.error(f"从日志队列读取时出错: {q_err}")
+                            all_logs.append(f"错误: 从日志队列读取时出错: {q_err}")
+                            new_logs_added = True
+
                         # 只有在有新日志添加时才更新显示，减少不必要的UI刷新
                         if new_logs_added and all_logs:
                             log_text = '\n'.join(all_logs)
@@ -398,7 +417,7 @@ def main():
                     if process.poll() is None:
                         process.terminate()
                         process.wait()
-                
+                logging.info("子进程分析循环结束.")
                 # 检查输出文件是否存在
                 if os.path.exists(output_file_path) and os.path.getsize(output_file_path) > 0:
                     # 读取输出文件
@@ -410,9 +429,13 @@ def main():
                     
                     # 如果日志文件存在，也保存到session_state中
                     if os.path.exists(log_file_path):
-                        with open(log_file_path, "r", encoding="utf-8") as f:
-                            log_data = f.read()
-                        st.session_state['log_data'] = log_data
+                        try:
+                            with open(log_file_path, "r", encoding="utf-8", errors="ignore") as f:
+                                log_data = f.read()
+                            st.session_state['log_data'] = log_data
+                        except Exception as log_read_err:
+                            logging.error(f"读取完整日志文件时出错: {log_read_err}")
+                            st.session_state['log_data'] = f"读取日志文件时出错: {log_read_err}"
                         
                     # 检查相似案例文件是否存在，并保存到session_state中
                     similar_cases_file = os.path.splitext(output_file_path)[0] + '_相似案例.xlsx'
