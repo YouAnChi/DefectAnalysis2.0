@@ -2,7 +2,7 @@ import json
 import os
 import logging
 import pandas as pd
-from langchain_deepseek import ChatDeepSeek
+import openai 
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from tqdm import tqdm
@@ -20,17 +20,20 @@ logging.basicConfig(
 # 初始化LLM模型
 def init_llm():
     try:
-        logging.info("正在初始化LLM模型...")
-        llm = ChatDeepSeek(
-            model="deepseek-reasoner",
-            api_key="sk-81262059b57c40ee944f3be1a3ffd038",
-            base_url="https://api.deepseek.com",
+        logging.info("正在初始化LLM模型 (使用 OpenAI 库)...")
+        client = openai.OpenAI(
+            api_key="1VyZ5+sL@n+YL7%F",
+            base_url="http://192.168.36.188:10040/v1"
         )
         # 测试API连接
         logging.info("测试LLM API连接...")
-        llm.invoke([{"role": "user", "content": "测试连接"}])
+        client.chat.completions.create(
+            model="DeepSeek-Llama-70B", # 确保模型名称与你的本地服务匹配
+            messages=[{"role": "user", "content": "测试连接"}],
+            max_tokens=10 # 限制测试调用的 token 数量
+        )
         logging.info("LLM模型初始化成功")
-        return llm
+        return client
     except Exception as e:
         logging.error(f"初始化LLM模型失败: {str(e)}")
         return None
@@ -310,27 +313,35 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
         system_prompt = load_system_prompt(system_prompt_file)
         logging.info(f"使用系统提示词: {system_prompt_file}")
         
+        # 构造 OpenAI 格式的消息
         messages = [
-            ("system", system_prompt),
-            ("human", f"请基于以下历史案例分析当前缺陷：\n\n{context}\n当前缺陷标题：\n{defect_title}\n\n当前缺陷描述：\n{defect_description}\n\n评分分类：{score_category}")
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"请基于以下历史案例分析当前缺陷：\n\n{context}\n当前缺陷标题：\n{defect_title}\n\n当前缺陷描述：\n{defect_description}\n\n评分分类：{score_category}"}
         ]
         
         logging.info("开始调用LLM进行分析...")
-        reasoning_content = ""
+        reasoning_content = "" # OpenAI 标准 API 不直接支持 reasoning_content
         answer_content = ""
         
         try:
-            for chunk in llm.stream(messages):
-                if hasattr(chunk, 'additional_kwargs') and 'reasoning_content' in chunk.additional_kwargs:
-                    reasoning_content += chunk.additional_kwargs['reasoning_content']
-                elif chunk.text():
-                    answer_content += chunk.text()
+            # 使用 OpenAI 客户端进行流式调用 (llm 变量现在是 OpenAI client)
+            stream = llm.chat.completions.create(
+                model="DeepSeek-Llama-70B", # 确保模型名称正确
+                messages=messages,
+                stream=True
+            )
+            for chunk in stream:
+                # 检查 OpenAI stream chunk 结构并提取内容
+                if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
+                    answer_content += chunk.choices[0].delta.content
             logging.info("LLM分析完成")
         except Exception as e:
             logging.error(f"LLM调用失败: {str(e)}")
-            return f"LLM调用失败: {str(e)}", f"分析过程出错: {str(e)}"
+            # 返回错误信息，保持三个返回值的结构，即使 reasoning 为空
+            return f"LLM调用失败: {str(e)}", f"分析过程出错: {str(e)}", similar_cases_info
         
-        return reasoning_content, answer_content, similar_cases_info
+        # OpenAI API 不返回 reasoning_content，因此返回空字符串
+        return "", answer_content, similar_cases_info
     except Exception as e:
         logging.error(f"缺陷分析过程出错: {str(e)}")
         return f"分析过程出错: {str(e)}", f"分析过程出错: {str(e)}", []

@@ -75,6 +75,12 @@ def tail_log_file(log_file_path, q):
     except Exception as e:
         q.put(f"读取日志文件出错: {str(e)}")
 
+# 定义一个函数来读取进程输出并将其添加到队列中
+def read_process_output(process, q):
+    for line in iter(process.stdout.readline, ''):
+        if line.strip():
+            q.put(line)
+
 # 主函数
 def main():
     # 显示Logo和标题
@@ -299,13 +305,7 @@ def main():
             progress_bar = st.progress(0)
             status_text = st.empty()
             
-            # 启动日志监控线程
-            log_thread = threading.Thread(
-                target=tail_log_file, 
-                args=(log_file_path, log_queue),
-                daemon=True
-            )
-            log_thread.start()
+            # 不再需要单独的日志文件监控线程，因为我们直接从进程输出读取日志
             
             # 构建命令参数
             cmd = [sys.executable, str(script_dir / "app.py")]
@@ -321,13 +321,17 @@ def main():
                 import pandas as pd
                 df = pd.read_excel(input_file_path)
                 has_score_category = '评分分类' in df.columns
+                logging.info(f"读取Excel文件成功，列名：{df.columns.tolist()}")
+                st.info(f"读取Excel文件成功，列名：{df.columns.tolist()}")
                 if has_score_category:
                     st.info("检测到Excel文件包含评分分类列，将根据评分分类选择相应的系统提示词文件")
                     logging.info("检测到Excel文件包含评分分类列，将根据评分分类选择相应的系统提示词文件")
-                    
                     # 这里不需要额外传递参数给app.py，因为app.py会自动检测Excel文件中的评分分类列
                     # 并为每一行数据根据其评分分类选择对应的系统提示词文件
                     st.info("系统将为每一行数据根据其评分分类选择对应的系统提示词文件")
+                else:
+                    st.warning("未检测到评分分类列，将使用默认系统提示词文件")
+                    logging.warning("未检测到评分分类列，将使用默认系统提示词文件")
             except Exception as e:
                 st.warning(f"读取Excel文件时出错: {str(e)}，将使用默认系统提示词文件")
                 logging.warning(f"读取Excel文件时出错: {str(e)}，将使用默认系统提示词文件")
@@ -351,6 +355,31 @@ def main():
                 start_time = time.time()
                 max_log_lines = 30  # 限制显示的最大日志行数为30行
                 
+                # 读取进程输出的函数
+                def read_process_output(process, q):
+                    try:
+                        for line in iter(process.stdout.readline, ''):
+                            if line.strip():
+                                # 直接将进程输出添加到日志队列
+                                q.put(line)
+                    except Exception as e:
+                        q.put(f"读取进程输出时出错: {str(e)}")
+                        logging.error(f"读取进程输出时出错: {str(e)}")
+                    finally:
+                        # 确保进程结束时通知队列
+                        q.put("进程输出读取完成")
+                
+                # 启动进程输出读取线程
+                output_thread = threading.Thread(
+                    target=read_process_output,
+                    args=(process, log_queue),
+                    daemon=True
+                )
+                output_thread.start()
+                
+                # 添加提示信息
+                st.info("后端进程已启动，日志将实时显示在下方...")
+                
                 try:
                     while True:
                         # 检查进程是否结束
@@ -364,21 +393,8 @@ def main():
                             if log_queue.empty():
                                 break
                         
-                        # 从队列中获取日志
+                        # 从队列中获取日志 - 优化为单次循环
                         new_logs_added = False
-                        try:
-                            while not log_queue.empty():
-                                log_line = log_queue.get_nowait()
-                                all_logs.append(log_line)
-                                new_logs_added = True
-                                # 如果日志行数超过最大限制，则保留最新的日志
-                                if len(all_logs) > max_log_lines:
-                                    all_logs = all_logs[-max_log_lines:]
-                        except queue.Empty:
-                            pass
-                        
-                        # 尝试从队列获取日志
-                        # logging.debug("检查日志队列...") # 调试日志，可能过于频繁
                         try:
                             while not log_queue.empty():
                                 log_line = log_queue.get_nowait()
@@ -400,6 +416,12 @@ def main():
                             log_container.code(log_text, language="")
                             # 强制滚动到最新日志
                             st.session_state['log_updated'] = True
+                            
+                            # 将最新日志也写入到日志文件中，确保日志文件完整
+                            with open(log_file_path, "a", encoding="utf-8") as f:
+                                for line in all_logs[-5:]:  # 只写入最新的几行，避免重复
+                                    if "进程输出读取完成" not in line and not line.startswith("读取进程输出时出错"):
+                                        f.write(line)
                         
                         # 更新进度条（这里使用一个简单的基于时间的估计）
                         if not completed:
