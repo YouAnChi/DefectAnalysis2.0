@@ -2,7 +2,7 @@ import json
 import os
 import logging
 import pandas as pd
-import openai 
+from langchain_deepseek import ChatDeepSeek
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from tqdm import tqdm
@@ -17,23 +17,25 @@ logging.basicConfig(
     ]
 )
 
-# 初始化LLM模型
+# --- 全局变量定义 ---
+FAISS_INDEX_PATH = "faiss_index"
+KNOWLEDGE_BASE_FILE = 'defects_knowledge_base.json' # 默认知识库文件名
+# SYSTEM_PROMPT_DIR = '.' # load_system_prompt 已处理相对路径
+
+# --- 模型和数据加载函数 ---
 def init_llm():
     try:
-        logging.info("正在初始化LLM模型 (使用 OpenAI 库)...")
-        client = openai.OpenAI(
-            api_key="1VyZ5+sL@n+YL7%F",
-            base_url="http://192.168.36.188:10040/v1"
+        logging.info("正在初始化LLM模型...")
+        llm = ChatDeepSeek(
+            model="deepseek-reasoner",
+            api_key="sk-81262059b57c40ee944f3be1a3ffd038",
+            base_url="https://api.deepseek.com",
         )
         # 测试API连接
         logging.info("测试LLM API连接...")
-        client.chat.completions.create(
-            model="DeepSeek-Llama-70B", # 确保模型名称与你的本地服务匹配
-            messages=[{"role": "user", "content": "测试连接"}],
-            max_tokens=10 # 限制测试调用的 token 数量
-        )
+        llm.invoke([{"role": "user", "content": "测试连接"}])
         logging.info("LLM模型初始化成功")
-        return client
+        return llm
     except Exception as e:
         logging.error(f"初始化LLM模型失败: {str(e)}")
         return None
@@ -104,11 +106,25 @@ def load_knowledge_base(file_path):
         logging.error(f"读取知识库文件失败: {str(e)}")
         return None
 
-# 构建向量存储
-def build_vector_store(_knowledge_base):
+# 构建或加载向量存储
+def build_vector_store(_knowledge_base, embeddings_model, index_path):
+    logging.info(f"检查是否存在本地索引: {index_path}")
+    if os.path.exists(index_path):
+        try:
+            logging.info(f"正在从 {index_path} 加载本地 FAISS 索引...")
+            # 确保允许危险的反序列化，如果你的 FAISS 版本需要
+            vector_store = FAISS.load_local(index_path, embeddings_model, allow_dangerous_deserialization=True)
+            logging.info("本地 FAISS 索引加载成功")
+            return vector_store
+        except Exception as e:
+            logging.warning(f"加载本地索引失败: {str(e)}，将重新构建索引。")
+
+    logging.info("未找到或加载本地索引失败，开始构建新的向量存储...")
     try:
-        logging.info("开始构建向量存储...")
-        defects = _knowledge_base['defects']
+        defects = _knowledge_base.get('defects', [])
+        if not defects:
+            logging.error("知识库中未找到 'defects' 列表或列表为空")
+            return None
         total_defects = len(defects)
         logging.info(f"共有 {total_defects} 条缺陷记录需要处理")
         
@@ -146,14 +162,21 @@ def build_vector_store(_knowledge_base):
                 continue
         
         logging.info(f"成功处理 {len(texts)} 条有效缺陷记录，开始构建向量索引...")
-        embeddings = init_embeddings()
-        if not embeddings:
+        # embeddings = init_embeddings() # 改为从参数传入
+        if not embeddings_model:
             logging.error("无法获取向量化模型，向量存储构建中止")
             return None
         logging.info(f"开始调用 FAISS.from_texts 构建向量存储，共 {len(texts)} 个文本...")
         try:
-            vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
+            vector_store = FAISS.from_texts(texts, embeddings_model, metadatas=metadatas)
             logging.info("FAISS.from_texts 调用完成")
+            # 保存索引到本地
+            try:
+                logging.info(f"正在将新构建的索引保存到 {index_path}...")
+                vector_store.save_local(index_path)
+                logging.info("索引保存成功")
+            except Exception as save_e:
+                logging.error(f"保存 FAISS 索引失败: {str(save_e)}")
         except Exception as faiss_e:
             logging.error(f"调用 FAISS.from_texts 时出错: {str(faiss_e)}", exc_info=True)
             return None
@@ -190,6 +213,7 @@ def load_system_prompt(file_path):
 # 缓存机制已移除
 
 # 分析缺陷
+# 分析缺陷 (优化后)
 def analyze_defect(defect_description, defect_title, score_category, vector_store, llm, similarity_threshold=0.3):
     try:
         logging.info(f"开始分析缺陷: {defect_title if defect_title else '无标题'}")
@@ -216,68 +240,33 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
         # 用于存储相似案例的详细信息，供后续导出使用
         similar_cases_info = []
         
-        # 执行检索
-        if not similar_docs:
-            try:
-                # 先根据评分分类筛选知识库中的文档
-                from langchain_core.documents import Document
-                filtered_docs = []
-                
-                # 获取向量存储中的所有文档
-                all_docs = vector_store.docstore._dict.values()
-                
-                # 根据评分分类筛选文档
-                for doc in all_docs:
-                    if isinstance(doc, Document) and doc.metadata.get('score_category') == score_category:
-                        filtered_docs.append(doc)
-                
-                logging.info(f"根据评分分类'{score_category}'筛选出 {len(filtered_docs)} 个文档")
-                
-                # 如果筛选后的文档数量太少，则使用原始检索
-                if len(filtered_docs) < 5:
-                    logging.info(f"筛选后文档数量不足，使用原始检索")
-                    logging.info(f"在原始向量存储中执行 similarity_search_with_score (k=8)...")
-                    similar_docs = vector_store.similarity_search_with_score(
-                        defect_description,
-                        k=8
-                    )
-                    logging.info(f"原始向量存储检索完成，找到 {len(similar_docs)} 个结果。")
-                else:
-                    # 创建临时向量存储用于检索
-                    logging.info("开始创建临时向量存储...")
-                    from langchain_community.vectorstores import FAISS
-                    embeddings = init_embeddings()
-                    texts = [doc.page_content for doc in filtered_docs]
-                    metadatas = [doc.metadata for doc in filtered_docs]
-                    logging.info(f"准备使用 {len(texts)} 个文本和 {len(metadatas)} 个元数据创建临时 FAISS 索引")
-                    try:
-                        temp_vector_store = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
-                        logging.info("临时向量存储创建成功")
-                    except Exception as temp_faiss_e:
-                        logging.error(f"创建临时 FAISS 索引时出错: {str(temp_faiss_e)}", exc_info=True)
-                        # 如果临时索引创建失败，可以考虑回退到原始检索或直接报错
-                        logging.warning("临时索引创建失败，将尝试在原始向量存储中检索")
-                        similar_docs = vector_store.similarity_search_with_score(defect_description, k=8)
-                        logging.info(f"回退到原始向量存储检索完成，找到 {len(similar_docs)} 个结果。")
-                        temp_vector_store = None # 标记临时存储不可用
+        # 执行带元数据过滤的检索
+        try:
+            logging.info(f"在主向量存储中执行带元数据过滤的 similarity_search_with_score (k=8, filter={{'score_category': '{score_category}'}})...")
+            # 注意：FAISS 的 filter 参数通常需要精确匹配。确保 'score_category' 在 metadata 中确实存在且值为字符串。
+            search_filter = {'score_category': score_category}
+            similar_docs = vector_store.similarity_search_with_score(
+                defect_description,
+                k=8,
+                filter=search_filter
+            )
+            logging.info(f"带过滤的检索完成，找到 {len(similar_docs)} 个匹配 '{score_category}' 的结果。")
 
-                    # 在筛选后的文档中进行相似度检索
-                    if temp_vector_store:
-                     logging.info("开始在临时向量存储中进行相似度检索...")
-                    logging.info(f"在临时向量存储中执行 similarity_search_with_score (k=8)...")
-                    similar_docs = temp_vector_store.similarity_search_with_score(
-                        defect_description,
-                        k=8
-                    )
-                    logging.info(f"临时向量存储检索完成，找到 {len(similar_docs)} 个结果。")
-                    logging.info("临时向量存储检索完成")
-                
-                logging.info(f"检索到 {len(similar_docs)} 个候选案例")
-                
-                # 缓存机制已移除
-            except Exception as e:
-                logging.error(f"检索相似案例失败: {str(e)}")
+        except NotImplementedError:
+            logging.warning("当前 FAISS 版本或配置不支持元数据过滤，将执行普通检索后手动过滤。")
+            try:
+                logging.info(f"执行普通 similarity_search_with_score (k=20) 以便后续过滤...") # 获取更多结果以增加过滤后命中的机会
+                all_similar_docs = vector_store.similarity_search_with_score(defect_description, k=20)
+                logging.info(f"普通检索完成，找到 {len(all_similar_docs)} 个结果。开始手动过滤...")
+                similar_docs = [(doc, score) for doc, score in all_similar_docs if doc.metadata.get('score_category') == score_category]
+                similar_docs = similar_docs[:8] # 取过滤后的前8个
+                logging.info(f"手动过滤完成，找到 {len(similar_docs)} 个匹配 '{score_category}' 的结果。")
+            except Exception as e_inner:
+                logging.error(f"普通检索或手动过滤失败: {str(e_inner)}")
                 similar_docs = []
+        except Exception as e:
+            logging.error(f"检索相似案例失败: {str(e)}")
+            similar_docs = []
         
         # 取前3个最相似的案例
         similar_docs = similar_docs[:3] if similar_docs else []
@@ -313,40 +302,66 @@ def analyze_defect(defect_description, defect_title, score_category, vector_stor
         system_prompt = load_system_prompt(system_prompt_file)
         logging.info(f"使用系统提示词: {system_prompt_file}")
         
-        # 构造 OpenAI 格式的消息
         messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"请基于以下历史案例分析当前缺陷：\n\n{context}\n当前缺陷标题：\n{defect_title}\n\n当前缺陷描述：\n{defect_description}\n\n评分分类：{score_category}"}
+            ("system", system_prompt),
+            ("human", f"请基于以下历史案例分析当前缺陷：\n\n{context}\n当前缺陷标题：\n{defect_title}\n\n当前缺陷描述：\n{defect_description}\n\n评分分类：{score_category}")
         ]
         
         logging.info("开始调用LLM进行分析...")
-        reasoning_content = "" # OpenAI 标准 API 不直接支持 reasoning_content
+        reasoning_content = ""
         answer_content = ""
         
         try:
-            # 使用 OpenAI 客户端进行流式调用 (llm 变量现在是 OpenAI client)
-            stream = llm.chat.completions.create(
-                model="DeepSeek-Llama-70B", # 确保模型名称正确
-                messages=messages,
-                stream=True
-            )
-            for chunk in stream:
-                # 检查 OpenAI stream chunk 结构并提取内容
-                if chunk.choices and chunk.choices[0].delta and chunk.choices[0].delta.content:
-                    answer_content += chunk.choices[0].delta.content
+            for chunk in llm.stream(messages):
+                if hasattr(chunk, 'additional_kwargs') and 'reasoning_content' in chunk.additional_kwargs:
+                    reasoning_content += chunk.additional_kwargs['reasoning_content']
+                elif chunk.text():
+                    answer_content += chunk.text()
             logging.info("LLM分析完成")
         except Exception as e:
             logging.error(f"LLM调用失败: {str(e)}")
-            # 返回错误信息，保持三个返回值的结构，即使 reasoning 为空
-            return f"LLM调用失败: {str(e)}", f"分析过程出错: {str(e)}", similar_cases_info
+            return f"LLM调用失败: {str(e)}", f"分析过程出错: {str(e)}"
         
-        # OpenAI API 不返回 reasoning_content，因此返回空字符串
-        return "", answer_content, similar_cases_info
+        return reasoning_content, answer_content, similar_cases_info
     except Exception as e:
         logging.error(f"缺陷分析过程出错: {str(e)}")
         return f"分析过程出错: {str(e)}", f"分析过程出错: {str(e)}", []
 
+# --- 全局初始化 ---
+logging.info("开始全局初始化...")
+LLM_MODEL = init_llm()
+EMBEDDINGS_MODEL = init_embeddings()
+
+# 处理知识库文件路径（移到全局）
+# 如果知识库文件路径不是绝对路径，则尝试在当前脚本目录下查找
+if not os.path.isabs(KNOWLEDGE_BASE_FILE):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    default_knowledge_path = os.path.join(script_dir, KNOWLEDGE_BASE_FILE)
+    if os.path.exists(default_knowledge_path):
+        KNOWLEDGE_BASE_FILE = default_knowledge_path
+    else:
+        # 如果当前目录下没有找到，则使用相对于工作目录的路径
+        KNOWLEDGE_BASE_FILE = os.path.abspath(KNOWLEDGE_BASE_FILE)
+
+KNOWLEDGE_BASE = load_knowledge_base(KNOWLEDGE_BASE_FILE)
+VECTOR_STORE = None
+if KNOWLEDGE_BASE and EMBEDDINGS_MODEL:
+    VECTOR_STORE = build_vector_store(KNOWLEDGE_BASE, EMBEDDINGS_MODEL, FAISS_INDEX_PATH)
+else:
+    logging.error("无法加载知识库或嵌入模型，向量存储未初始化。")
+
+if not LLM_MODEL:
+    logging.error("LLM模型初始化失败，应用可能无法正常工作。")
+if not VECTOR_STORE:
+    logging.error("向量存储初始化失败，RAG 功能将不可用。")
+
+logging.info("全局初始化完成")
+
 def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowledge_base_file='defects_knowledge_base.json', similarity_threshold=0.3):
+    # 使用全局变量 KNOWLEDGE_BASE_FILE 作为默认值
+    # 但允许命令行参数覆盖
+    if knowledge_base_file == 'defects_knowledge_base.json': # 如果是默认值，使用全局确定的路径
+        knowledge_base_file = KNOWLEDGE_BASE_FILE
     # 确保输入文件路径是绝对路径
     input_file = os.path.abspath(input_file)
     output_file = os.path.abspath(output_file)
@@ -382,29 +397,13 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
             logging.error(f"创建输出目录失败: {str(e)}")
             return
     
-    # 加载知识库
-    # 如果指定的知识库文件不存在，尝试使用默认知识库
-    if not os.path.exists(knowledge_base_file):
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        default_knowledge_file = os.path.join(script_dir, 'defects_knowledge_base.json')
-        logging.warning(f"指定的知识库文件不存在: {knowledge_base_file}，尝试使用默认知识库: {default_knowledge_file}")
-        knowledge_base_file = default_knowledge_file
-    
-    knowledge_base = load_knowledge_base(knowledge_base_file)
-    if knowledge_base is None:
-        logging.error("加载知识库失败，程序退出")
-        return
-    
-    # 构建向量存储
-    vector_store = build_vector_store(knowledge_base)
-    if vector_store is None:
-        logging.error("构建向量存储失败，程序退出")
-        return
-    
-    # 初始化LLM模型
-    llm = init_llm()
-    if llm is None:
-        logging.error("LLM模型初始化失败，程序退出")
+    # 使用全局初始化的模型和数据
+    llm = LLM_MODEL
+    vector_store = VECTOR_STORE
+
+    # 检查全局初始化是否成功
+    if not llm or not vector_store:
+        logging.error("全局初始化失败，无法继续执行 main 函数。请检查日志。")
         return
     
     try:
@@ -464,13 +463,13 @@ def main(input_file='缺陷1.xlsx', output_file='缺陷分析结果.xlsx', knowl
                 score_category = '功能使用'
             
             try:
-                # 分析缺陷
+                # 分析缺陷 (使用全局变量)
                 reasoning, analysis, similar_cases = analyze_defect(
                     str(defect_description), 
                     str(defect_title), 
                     str(score_category), 
-                    vector_store, 
-                    llm,
+                    VECTOR_STORE, # 使用全局 vector_store
+                    LLM_MODEL,    # 使用全局 llm
                     similarity_threshold=similarity_threshold
                 )
                 results_df.at[index, '推理过程'] = reasoning
