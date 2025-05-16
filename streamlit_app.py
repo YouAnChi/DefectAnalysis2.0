@@ -102,6 +102,18 @@ def main():
         3. 点击"开始分析"按钮，等待分析完成
         4. 分析完成后下载结果文件
         """)
+        # 添加模板下载按钮
+        template_file_path = Path(__file__).parent / "static" / "缺陷1.xlsx"
+        if template_file_path.exists():
+            with open(template_file_path, "rb") as fp:
+                st.download_button(
+                    label="📄 下载模板文件 (缺陷1.xlsx)",
+                    data=fp,
+                    file_name="缺陷1.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                )
+        else:
+            st.warning("模板文件 '缺陷1.xlsx' 未找到.")
         st.markdown('</div>', unsafe_allow_html=True)
     
     # 创建两列布局
@@ -110,8 +122,8 @@ def main():
     # 如果分析已完成，显示下载按钮区域和数据可视化仪表板
     if st.session_state['analysis_completed']:
         st.markdown('<div class="download-section">', unsafe_allow_html=True)
-        st.success("✅ 分析已完成，可以下载结果文件和日志")
-        download_col1, download_col2, download_col3, download_col4 = st.columns(4)
+        st.success("✅ 分析已完成，可以下载结果文件")
+        download_col_result, download_col_similar, download_col_extract = st.columns(3)
         
         # 显示数据可视化仪表板
         if st.session_state['output_data'] is not None:
@@ -132,7 +144,7 @@ def main():
                 if os.path.exists(viz_file_path):
                     os.unlink(viz_file_path)
         
-        with download_col1:
+        with download_col_result:
             if st.session_state['output_data'] is not None:
                 st.markdown('<div class="primary-button">', unsafe_allow_html=True)
                 st.download_button(
@@ -144,17 +156,9 @@ def main():
                 )
                 st.markdown('</div>', unsafe_allow_html=True)
         
-        with download_col2:
-            if st.session_state['log_data'] is not None:
-                st.download_button(
-                    label="📝 下载完整日志",
-                    data=st.session_state['log_data'],
-                    file_name="defect_analysis_full.log",
-                    mime="text/plain",
-                    key="download_log"
-                )
+        # download_col2 (log download) block is now removed.
                 
-        with download_col3:
+        with download_col_similar:
             # 添加下载相似案例的按钮
             if st.session_state['similar_cases_data'] is not None:
                 st.download_button(
@@ -179,9 +183,10 @@ def main():
                         key="download_similar_cases"
                     )
                 
-        with download_col4:
+        with download_col_extract:
             if not st.session_state['data_processed'] and st.session_state['output_data'] is not None:
-                if st.button("🔍 提取缺陷数据", key="extract_data"):
+                st.markdown('<div class="primary-button">', unsafe_allow_html=True)
+                if st.button("🔍 提取缺陷数据", key="extract_data", type="primary"):
                     with st.spinner("正在提取缺陷数据..."):
                         # 创建临时输入文件
                         temp_input_file = tempfile.NamedTemporaryFile(delete=False, suffix='.xlsx')
@@ -218,6 +223,7 @@ def main():
                                 os.unlink(output_file_path)
                             except Exception as e:
                                 st.warning(f"清理临时文件失败: {str(e)}")
+                st.markdown('</div>', unsafe_allow_html=True)
             elif st.session_state['data_processed'] and st.session_state['processed_data'] is not None:
                 st.download_button(
                     label="📈 下载提取后的缺陷数据",
